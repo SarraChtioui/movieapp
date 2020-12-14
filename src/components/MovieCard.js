@@ -1,6 +1,10 @@
 import React,{useState} from 'react'
 import { Card, Button } from 'react-bootstrap'
-import StarRatingComponent from "react-star-rating-component";
+import StarRatingComponent from "react-star-rating-component"
+import button from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+import MovieList from './MovieList';
+
 
 const MovieCard =(props) => {
     const [search,setSearch] = useState('')
@@ -28,9 +32,9 @@ const MovieCard =(props) => {
   <Card.Img variant="top" src = {el.Poster} />
   <Card.Body>
     <Card.Title>{el.Title}</Card.Title>
-    <Card.Text>
-{el.Description}
-    </Card.Text>
+    <Card.button>
+{/* <Link to={'/movie/${el.Id}'}><button>movie</button></Link> */}
+    </Card.button>
     <StarRatingComponent
                     name="Rate"
                     starCount={5}
